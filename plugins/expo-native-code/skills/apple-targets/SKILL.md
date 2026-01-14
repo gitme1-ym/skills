@@ -5,7 +5,7 @@ description: Create Apple extension targets like widgets, app clips, share exten
 
 ## Important: Custom Builds Required
 
-**Apple targets require custom native builds.** Your app will no longer work in Expo Go.
+**Apple targets require custom native builds.**
 
 Only use this skill when you specifically need iOS extensions like widgets, app clips, or share extensions. If you're just building a standard app, use Expo Go with `npx expo start` instead.
 
@@ -35,28 +35,29 @@ npx create-target share
 ```
 
 This will:
+
 1. Generate target files in the `/targets` directory
 2. Install `@bacons/apple-targets`
 3. Add the Config Plugin to your `app.json`
 
 ## Supported Target Types
 
-| Type | Command | Purpose |
-|------|---------|---------|
-| widget | `npx create-target widget` | Home screen widgets and live activities |
-| clip | `npx create-target clip` | App Clip experiences |
-| action | `npx create-target action` | Share sheet actions |
-| share | `npx create-target share` | Share extensions |
-| safari | `npx create-target safari` | Safari extensions |
-| watch | `npx create-target watch` | Apple Watch companion apps |
-| intent | `npx create-target intent` | Siri intent extensions |
-| intent-ui | `npx create-target intent-ui` | Siri intent UI extensions |
-| notification-content | `npx create-target notification-content` | Rich notification content |
-| notification-service | `npx create-target notification-service` | Notification processing |
-| spotlight | `npx create-target spotlight` | Spotlight index extensions |
-| bg-download | `npx create-target bg-download` | Background download extensions |
-| credentials-provider | `npx create-target credentials-provider` | Credentials provider extensions |
-| account-auth | `npx create-target account-auth` | Account authentication extensions |
+| Type                 | Command                                  | Purpose                                 |
+| -------------------- | ---------------------------------------- | --------------------------------------- |
+| widget               | `npx create-target widget`               | Home screen widgets and live activities |
+| clip                 | `npx create-target clip`                 | App Clip experiences                    |
+| action               | `npx create-target action`               | Share sheet actions                     |
+| share                | `npx create-target share`                | Share extensions                        |
+| safari               | `npx create-target safari`               | Safari extensions                       |
+| watch                | `npx create-target watch`                | Apple Watch companion apps              |
+| intent               | `npx create-target intent`               | Siri intent extensions                  |
+| intent-ui            | `npx create-target intent-ui`            | Siri intent UI extensions               |
+| notification-content | `npx create-target notification-content` | Rich notification content               |
+| notification-service | `npx create-target notification-service` | Notification processing                 |
+| spotlight            | `npx create-target spotlight`            | Spotlight index extensions              |
+| bg-download          | `npx create-target bg-download`          | Background download extensions          |
+| credentials-provider | `npx create-target credentials-provider` | Credentials provider extensions         |
+| account-auth         | `npx create-target account-auth`         | Account authentication extensions       |
 
 ## Folder Structure
 
@@ -90,7 +91,7 @@ module.exports = {
 
   // Special colors for build settings
   colors: {
-    $accent: "#FF6B6B",           // Widget tint color
+    $accent: "#FF6B6B", // Widget tint color
     $widgetBackground: "#FFFFFF", // Widget background
   },
 
@@ -99,8 +100,8 @@ module.exports = {
 
   // Custom entitlements
   entitlements: {
-    "com.apple.security.application-groups": ["group.com.example.app"]
-  }
+    "com.apple.security.application-groups": ["group.com.example.app"],
+  },
 };
 ```
 
@@ -116,8 +117,8 @@ module.exports = (config) => ({
   entitlements: {
     // Mirror app's App Groups
     "com.apple.security.application-groups":
-      config.ios?.entitlements?.["com.apple.security.application-groups"] ?? []
-  }
+      config.ios?.entitlements?.["com.apple.security.application-groups"] ?? [],
+  },
 });
 ```
 
@@ -148,8 +149,8 @@ module.exports = (config) => ({
   type: "widget",
   entitlements: {
     "com.apple.security.application-groups":
-      config.ios?.entitlements?.["com.apple.security.application-groups"] ?? []
-  }
+      config.ios?.entitlements?.["com.apple.security.application-groups"] ?? [],
+  },
 });
 ```
 
@@ -324,7 +325,7 @@ npx create-target clip
 module.exports = {
   type: "clip",
   name: "MyClip",
-  exportJs: true,  // Bundle React Native code
+  exportJs: true, // Bundle React Native code
 };
 ```
 
@@ -361,7 +362,7 @@ npx create-target share
 module.exports = {
   type: "share",
   name: "ShareExtension",
-  exportJs: true,  // For React Native share extensions
+  exportJs: true, // For React Native share extensions
 };
 ```
 
@@ -384,7 +385,7 @@ module.exports = {
     $accent: { light: "#007AFF", dark: "#0A84FF" },
     $widgetBackground: { light: "#FFFFFF", dark: "#1C1C1E" },
     customColor: { light: "#E4975D", dark: "#3E72A0" },
-  }
+  },
 };
 ```
 
@@ -411,7 +412,9 @@ For EAS Build, configure extensions in `app.json`:
                   "bundleIdentifier": "com.example.app.widget",
                   "targetName": "my-widget",
                   "entitlements": {
-                    "com.apple.security.application-groups": ["group.com.example.app"]
+                    "com.apple.security.application-groups": [
+                      "group.com.example.app"
+                    ]
                   }
                 }
               ]
