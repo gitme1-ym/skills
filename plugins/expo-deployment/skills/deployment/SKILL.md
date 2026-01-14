@@ -1,6 +1,8 @@
 ---
 name: deployment
 description: Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes
+version: 1.0.0
+license: MIT
 ---
 
 # Deployment
@@ -11,11 +13,11 @@ This skill covers deploying Expo applications across all platforms using EAS (Ex
 
 Consult these resources as needed:
 
-- ./reference/workflows.md -- CI/CD workflows for automated deployments and PR previews
-- ./reference/testflight.md -- Submitting iOS builds to TestFlight for beta testing
-- ./reference/app-store-metadata.md -- Managing App Store metadata and ASO optimization
-- ./reference/play-store.md -- Submitting Android builds to Google Play Store
-- ./reference/ios-app-store.md -- iOS App Store submission and review process
+- ./references/workflows.md -- CI/CD workflows for automated deployments and PR previews
+- ./references/testflight.md -- Submitting iOS builds to TestFlight for beta testing
+- ./references/app-store-metadata.md -- Managing App Store metadata and ASO optimization
+- ./references/play-store.md -- Submitting Android builds to Google Play Store
+- ./references/ios-app-store.md -- iOS App Store submission and review process
 
 ## Quick Start
 

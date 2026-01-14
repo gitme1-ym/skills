@@ -1,6 +1,8 @@
 ---
 name: api-routes
 description: Guidelines for creating API routes in Expo Router with EAS Hosting
+version: 1.0.0
+license: MIT
 ---
 
 ## When to Use API Routes
