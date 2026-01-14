@@ -15,7 +15,7 @@ Install a plugin:
 ```
 /plugin install expo-app-design
 /plugin install upgrading-expo
-/plugin install expo-cicd-workflows
+/plugin install expo-deployment
 ```
 
 ## License
