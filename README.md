@@ -1,8 +1,10 @@
 # Expo Skills
 
-Official [Claude Code](https://claude.com/claude-code) skills from the Expo team for building and deploying robust Expo apps.
+Official AI agent skills from the Expo team for building, deploying, and debugging robust Expo apps.
 
 ## Installation
+
+## Claude Code
 
 Add the marketplace:
 
@@ -17,6 +19,16 @@ Install a plugin:
 /plugin install upgrading-expo
 /plugin install expo-deployment
 ```
+
+## Any agent
+
+We primarily use [Claude Code](https://claude.com/claude-code) at Expo, skills are fine-tuned for Opus models. But you can use the skills with any AI agent:
+
+```
+bunx add-skill expo/skills
+```
+
+> This will extract the skills individually so you'll need to manually upgrade them.
 
 ## License
 
