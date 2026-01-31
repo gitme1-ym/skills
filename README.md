@@ -6,7 +6,7 @@ Official AI agent skills from the Expo team for building, deploying, and debuggi
 
 We primarily use [Claude Code](https://claude.com/claude-code) at Expo, skills are fine-tuned for Opus models. But you can use these skills with any AI agent.
 
-## Claude Code
+## https://chatgpt.com/share/697dd51a-d3a0-800a-a74e-dd0ac437430aClaude Code
 
 Add the marketplace:
 
